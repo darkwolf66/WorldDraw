@@ -1,0 +1,151 @@
+body {
+  background-color: #a9a9a9;
+  overflow: hidden;
+  position: fixed;
+}
+
+.y-label-list, .x-label-list {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.y-label-list .label, .x-label-list .label {
+  text-align: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.y-label-list .grid, .x-label-list .grid {
+  position: absolute;
+}
+
+.y-label-list {
+  background-color: #fff;
+  height: 10000px;
+  width: 50px;
+}
+.y-label-list .label {
+  width: 50px;
+  height: 99px;
+  line-height: 100px;
+  vertical-align: middle;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.x-label-list {
+  background-color: #fff;
+  width: 10000px;
+  height: 25px;
+}
+.x-label-list .label {
+  width: 99px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.xy-hide {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.xy-hide .y-hide {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+.welcome {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  padding-top: 130px;
+  text-align: center;
+  position: fixed;
+}
+.welcome .btn {
+  margin-top: 20px;
+  font-size: 22px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.welcome #world_name {
+  font-size: 30px;
+  text-align: center;
+}
+.welcome .js-register-view {
+  display: none;
+}
+.welcome .js-switch-auth-view {
+  font-size: 16px;
+}
+
+.loading {
+  background-color: black;
+  z-index: 9999;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+}
+.loading i {
+  color: white;
+  font-size: 100px;
+  margin-top: 140px;
+}
+
+.land-gui {
+  display: none;
+  border-radius: 5px;
+  position: fixed;
+  width: 500px;
+  max-height: 70%;
+  top: 10px;
+  left: 5px;
+  background-color: rgba(56, 56, 56, 0.98);
+  color: white;
+}
+.land-gui .close {
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+}
+.land-gui h3 {
+  margin-top: 10px;
+}
+
+.quick-user-gui {
+  border-radius: 5px;
+  position: fixed;
+  width: 300px;
+  max-height: 70%;
+  top: 10px;
+  right: 0px;
+  background-color: rgba(56, 56, 56, 0.98);
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .land-gui {
+    top: 90px;
+  }
+}
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+               supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*# sourceMappingURL=styles.css.map */

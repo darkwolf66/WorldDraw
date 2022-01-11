@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="third/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
+    <link href="css/styles.css" rel="stylesheet">
+
+    <title>World Draw</title>
+</head>
+<body>
+<div class="loading">
+    <i class="fas fa-circle-notch fa-spin"></i>
+</div>
+<canvas id="world" class="draggable" width="10000" height="10000" style="position: absolute"></canvas>
+<div class="y-label-list"></div>
+<div class="x-label-list"></div>
+<div class="xy-hide">
+    <div class="y-hide"></div>
+    <div class="x-hide"></div>
+</div>
+<div class="welcome">
+    <div class="container">
+        <h1>Welcome to WorldDraw</h1>
+        <h5>A 2D Pixel Universe where everything is possible!</h5>
+    </div>
+    <a class="btn btn-dark js-switch-auth-views" href="#">Register/Login</a>
+    <div class="container js-login-view">
+        <form id="login" class="row justify-content-center">
+            <div class="col-10 col-sm-6 col-xl-4 mt-3">
+                <input class="form-control mb-2" id="world_name" value="Earth" readonly>
+                <input class="form-control mb-2" id="username" placeholder="Your Username">
+                <input class="form-control" type="password" id="password" placeholder="Your Password">
+                <button class="btn btn-dark btn-block" type="submit">Login</button>
+            </div>
+        </form>
+        <div class="col-12">
+        </div>
+    </div>
+    <div class="container js-register-view">
+        <form id="register" class="row justify-content-center">
+            <div class="col-10 col-sm-6 col-xl-4 mt-3">
+                <input class="form-control mb-2" id="re-username" placeholder="Your Username">
+                <input class="form-control" type="password" id="re-password" placeholder="Enter Your Password">
+                <input class="form-control mt-1" type="password" id="re-re-password" placeholder="Re-Enter Your Password">
+                <button class="btn btn-dark btn-block" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="land-gui noselect">
+    <div class="close">
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="buy">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3>Land <span class="land-id"></span></h3>
+                    <div class="owner"></div>
+                    <div class="price"></div>
+                    <button class="btn btn-light js-buy mb-2" data-land-id="">
+                        Buy Land
+                    </button>
+                    <div class="content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="quick-user-gui noselect">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center pt-2">
+                <h4 class="js-player-name"></h4>
+                <h2 class="js-player-coins"></h2>
+            </div>
+            <div class="col-12">
+                <div class="colorPicker"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+<script src="js/third/socket.io.min.js"></script>
+<script src="js/allow-drag.js"></script>
+<script src="js/src/game.js"></script>
+</body>
+</html>
